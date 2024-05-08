@@ -40,7 +40,6 @@ def track(file: UploadFile):
 
         with open(output_path_to_file, "rb") as video_file:
             encoded_string = base64.b64encode(video_file.read())
-        os.remove(output_path_to_file)
         os.remove(input_path_to_file)
 
         return encoded_string
